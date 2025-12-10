@@ -1,0 +1,10 @@
+Digital Differential Analyzer (DDA):
+
+A digital differential analyzer (DDA) is used for linear interpolation of variables over an interval between given start and end points and for rasterization of lines, triangles, and polygons. Using the DDA Algorithm, write a C program that accepts input for two points and draws a line segment between them.
+
+Aim: To implement the DDA Algorithm for drawing a line segment between two given end points, A (x1, y1)
+e B(x2, y2).
+
+Description:
+The DDA algorithm is an incremental scan conversion method. Here we perform calculations
+at each step using the results from the preceding step. The characteristic of the DDA algorithm is to take unit steps along one coordinate and compute the corresponding values along the other coordinate. The unit steps are always along the coordinate of greatest change, e.g., if dx = 10 and dy = 5, then we would take unit steps along x and compute the steps along y.
