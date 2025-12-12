@@ -1,0 +1,31 @@
+Bresenham’s Line Algorithm:
+
+An algorithm which determines which order to form a close approximation to a straight line between two given points.
+
+Aim: To implement Bresenham’s line drawing algorithm for drawing a line segment between two
+given endpoints A (x1, y2) and B(x2, y2). 
+
+Description:
+    Basic Concept:
+        Move across the x axis in unit intervals and at each step choose between two different y coordinates. 
+
+        For example, from position (2, 3) we have to choose between (3, 3) and (3, 4). We would like the point that is closer to the original line. 
+        
+        So we have to take decision to choose next point. So next pixels are selected based on the value of decision parameter p. The equations are given in below algorithm. 
+
+    Algorithm:
+        1. Input the two line end-points, storing the left end-point in (x0, y0).
+        2. Plot the point (x0, y0). 
+        3. Calculate the constants Δx, Δy, 2Δy, and (2Δy - 2Δx) and get the first value for the decision parameter as:
+
+            p0 = 2del(y) - del(x)
+        
+        4. At each xk along the line, starting at k = 0, perform the following test. If pk < 0, the next point to plot is  (xk+1, yk ) and: 
+        
+            p(k+1) = pk + 2 del(y)
+        
+        Otherwise, the next point to plot is (xk+1, yk+1) and:
+        
+            p(k+1) = pk + 2 del(y) - 2 del(x)
+        
+        5. Repeat step 4 (Δx – 1) times. 
