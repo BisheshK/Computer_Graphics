@@ -1,0 +1,22 @@
+Aim: 
+1. To apply the basic 2D transformations such as translation, Scaling, Rotation, shearing and reflection for a given 2D object. 
+
+Description: 
+We have to perform 2D transformations on 2D objects. Here we perform transformations on a line segment. 
+The 2D transformations are: 
+1. Translation
+2. Scaling
+3. Rotation
+4. Reflection
+5. Shear 
+
+1. Translation: Translation is defined as moving the object from one position to another position along
+straight line path. 
+
+2. Scaling: scaling refers to changing the size of the object either by increasing or decreasing. We will increase or decrease the size of the object based on scaling factors along x and y-axis. 
+
+3. Rotation: A rotation repositions all points in an object along a circular path in the plane centered at the
+pivot point. We rotate an object by an angle theta. 
+
+4. Reflection: Reflection is nothing but producing mirror image of an object. Reflection can be done just by
+rotating the object about given axis of reflection with an angle of 180 degrees. 
