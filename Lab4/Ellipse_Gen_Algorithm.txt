@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Aim: 
 1) To implement the Ellipse Generation Algorithm for drawing an ellipse of given center(x, y) and radius rx and ry.
 
@@ -44,4 +45,52 @@ Use the same incremental calculations as in region 1. Continue until y = 0.
 7.   Move each calculated pixel position (x, y) onto the elliptical path centered on (xc, yc) and plot
 the coordinate values 
     x = x + xc  ,
+=======
+Aim: 
+1) To implement the Ellipse Generation Algorithm for drawing an ellipse of given center(x, y) and radius rx and ry.
+
+Description: 
+ 
+Basic Concept: In Ellipse, 
+ 
+Symmetry between quadrants exists 
+ 
+Not symmetric between the two octants of a quadrant 
+ 
+Thus, we must calculate pixel positions along the elliptical arc through one quadrant and then we obtain
+positions in the remaining 3 quadrants by symmetry
+
+Algorithm: 
+ 
+1. Input rx, ry, and ellipse center (xc, yc), and obtain the first point on an ellipse centered on the origin as: 
+    (x0, y0) = (0, ry) 
+ 
+2. Calculate the initial parameter in region 1 as 
+    p1o = ry² - rx² * ry + 1/4 rx²
+
+3. At each xi position, starting at i = 0, if p1i < 0, the next point along the ellipse centered on (0, 0) is (xi + 1, yi) and                                                            
+    p1(i+1) = p1(i) + 2ry² * x(i+1) + ry²
+
+Otherwise, the next point is (xi + 1, yi – 1) and
+    p1(i+1) = p1(i) + 2ry² * x(i+1) - 2rx² * y(i+1) + ry²
+
+and continue until 2r²x >= 2r²y
+
+4. (x0, y0) is the last position calculated in region 1. Calculate the initial parameter in region 2 as
+    p2o = ry² * (Xo+1/2)² + rx² * (yo-1)² - rx²*ry²
+
+5.   At each yi position, starting at i = 0, if p2i > 0, the next point along the ellipse centered on (0,0) is (xi, yi – 1) and
+    p2(i+1) = p2(i) - 2rx² * y(i+1) + rx²
+
+Otherwise, the next point is (xi + 1, yi – 1) and 
+    p2(i+1) = p2(i) + 2ry² * x(i+1) - 2rx² * y(i+1) + rx²
+
+Use the same incremental calculations as in region 1. Continue until y = 0. 
+
+6.   For both regions determine symmetry points in the other three quadrants. 
+ 
+7.   Move each calculated pixel position (x, y) onto the elliptical path centered on (xc, yc) and plot
+the coordinate values 
+    x = x + xc  ,
+>>>>>>> ef18521f74b9569ff5b285a09857887a53e84c90
     y = y + yc 
